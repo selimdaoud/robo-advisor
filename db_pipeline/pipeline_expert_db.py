@@ -951,7 +951,9 @@ def display_with_curses(rows: List[Dict[str, Any]], db_url: str, user_id: Option
                 url = prompt_url()
                 if not url:
                     return
-                dest_dir = Path("data/dic_pdfs") if fond_choice == "default" else Path("data") / fond_choice
+                # Tous les PDF sont désormais stockés dans data/dic_pdfs (pas de sous-dossiers par fond)
+                dest_dir = Path("data/dic_pdfs")
+                dest_dir.mkdir(parents=True, exist_ok=True)
                 try:
                     info_win = curses.newwin(5, 60, max(1, (curses.LINES - 5) // 2), max(1, (curses.COLS - 60) // 2))
                     info_win.bkgd(" ", curses.color_pair(1))
@@ -1474,6 +1476,43 @@ def _prompt_openai(text: str) -> str:
     return resp.choices[0].message.content or ""
 
 
+def clean_orphan_pdfs(db_url: str, base_dir: Path, force: bool = False) -> None:
+    """Trouve les PDF dans base_dir non référencés en DB (champ source_pdf) et les affiche/efface."""
+    with psycopg.connect(db_url) as conn:
+        with conn.cursor() as cur:
+            cur.execute("SELECT source_pdf FROM products_global WHERE archived_at IS NULL AND source_pdf IS NOT NULL")
+            rows = cur.fetchall()
+    referenced = set()
+    for (path_str,) in rows:
+        try:
+            resolved = str(Path(path_str).resolve())
+            referenced.add(resolved)
+        except Exception:
+            continue
+
+    orphans = []
+    for pdf in base_dir.rglob("*.pdf"):
+        try:
+            resolved = str(pdf.resolve())
+        except Exception:
+            continue
+        if resolved not in referenced:
+            orphans.append(pdf)
+
+    if not orphans:
+        print("Aucun PDF orphelin trouvé.")
+        return
+
+    action = "Suppression" if force else "Simulation"
+    print(f"{action} : {len(orphans)} PDF orphelins détectés dans {base_dir}")
+    for pdf in orphans:
+        print(f" - {pdf}")
+        if force:
+            try:
+                pdf.unlink()
+            except Exception as exc:
+                print(f"   (erreur suppression: {exc})")
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Pipeline Expert DB — schéma + lecture Postgres")
@@ -1489,6 +1528,8 @@ def main() -> None:
     parser.add_argument("--debug", action="store_true", help="Afficher les réponses OpenAI brutes et logs détaillés")
     parser.add_argument("--show-isin", help="Afficher en texte les détails d'un produit par ISIN")
     parser.add_argument("--log-file", help="Chemin du fichier log (activé en mode --debug)")
+    parser.add_argument("--clean", action="store_true", help="Lister les PDF orphelins dans data/ (non référencés en DB)")
+    parser.add_argument("-f", "--force", dest="force_clean", action="store_true", help="Avec --clean, effacer réellement les PDF orphelins")
     args = parser.parse_args()
 
     # Configure logging (redacted formatter)
@@ -1504,6 +1545,10 @@ def main() -> None:
         path = Path(args.write)
         path.write_text(CREATE_TABLES_SQL.strip() + "\n", encoding="utf-8")
         print(f"Schéma écrit dans {path}")
+        return
+    if args.clean:
+        db_url = get_db_url(args.db_url)
+        clean_orphan_pdfs(db_url, Path("data"), force=args.force_clean)
         return
 
     if args.print_sql and not args.user and not args.upsert_json:
