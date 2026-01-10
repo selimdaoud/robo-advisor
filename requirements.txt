@@ -4,6 +4,3 @@ pdfplumber
 openai
 psycopg[binary]
 sqlalchemy
-pdfplumber
-openai
-psycopg[binary]
