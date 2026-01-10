@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+pdfplumber
+openai
+psycopg[binary]
+sqlalchemy
+pdfplumber
+openai
+psycopg[binary]

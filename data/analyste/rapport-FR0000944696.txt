@@ -1,0 +1,36 @@
+### Analyse du reporting pour le fonds Amundi Actions France Select (ISIN FR0000944696)
+
+#### 1) Performances glissantes du portefeuille
+```
+Depuis             : 9,44%
+1 mois             : -0,60%
+3 mois             : 3,96%
+1 an               : 11,67%
+3 ans              : 12,53%
+5 ans              : 34,54%
+Depuis 1990        : 835,63%
+```
+
+#### 2) Performances calendaires par année
+```
+2024 : -5,59%
+2023 : 13,69%
+2022 : -9,63%
+2021 : 25,17%
+2020 : -6,02%
+2019 : 26,01%
+2018 : -14,69%
+2017 : 9,85%
+2016 : 1,51%
+2015 : 14,88%
+```
+
+#### 3) Résumé pour un client retail
+Le fonds Amundi Actions France Select a connu des performances variées ces dernières années. Sur les performances glissantes, le portefeuille a affiché un rendement annuel de 11,67% sur un an et de 34,54% sur cinq ans. Cependant, il est important de noter que sa performance de -5,59% pour 2024 indique une baisse par rapport aux années précédentes.
+
+Comparé à son indice de référence, le fonds a eu des performances inférieures, notamment avec un écart négatif de -5,43% en 2024 et -15,33% sur cinq ans. En termes de volatilité, le portefeuille montre un taux similaire à l'indice, ce qui indique que les fluctuations de valeur sont comparables.
+
+En matière d'ESG, le fonds améliore ses pratiques environnementales et affiche un engagement actif dans la gestion de ses investissements.
+
+### Avis objectif
+Le fonds a des périodes de performance impressionnantes, mais le dernier rapport montre une tendance à la baisse. Il pourrait être judicieux pour les investisseurs de réévaluer leurs attentes et de tenir compte des perspectives du marché, notamment avec les incertitudes politiques et économiques actuelles. Si le fonds parvient à redresser ses performances et à capitaliser sur les tendances positives, il pourrait représenter une bonne opportunité d'investissement sur le long terme【4:1†reporting-FR0000944696.pdf】.

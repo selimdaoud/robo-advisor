@@ -1,0 +1,12 @@
+product_name,isin,sri,horizon,frais_courants_pct,frais_entree_pct,frais_sortie_pct,source_pdf
+DPAM  B Equities World Sustainable - Classe B - ISIN: BE0058652646,BE0058652646,4,6,2.1,2.0,0,data/dic_pdfs/DIS_BE0058652646.pdf
+DPAM  B Equities Europe Sustainable - Classe B - ISIN: BE0940002729,BE0940002729,4,5,1.98,2.0,0,data/dic_pdfs/DIS_BE0940002729.pdf
+DPAM  B Equities World Sustainable - Classe W - ISIN: BE6246068447,BE6246068447,4,6,1.27,2.0,0,data/dic_pdfs/DIS_BE6246068447.pdf
+DPAM  B Equities Europe Sustainable - Classe W - ISIN: BE6246078545,BE6246078545,4,5,1.13,2.0,0,data/dic_pdfs/DIS_BE6246078545.pdf
+DPAM  B Real Estate Europe Dividend Sustainable - Classe W - ISIN: BE6275503884,BE6275503884,4,5,1.38,2.0,0,data/dic_pdfs/DIS_BE6275503884.pdf
+DPAM  B Equities Euroland Sustainable - Classe W - ISIN: BE6324131224,BE6324131224,4,5,1.17,2.0,0,data/dic_pdfs/DIS_BE6324131224.pdf
+Lazard Equity SRI - Action PC EUR,FR0000003998,4,5,1.79,4.0,0.0,data/dic_pdfs/DIS_FR0000003998.pdf
+Fidelity SICAV - Fidelity Europe Action A,FR0000008674,4,5,2.26,3.5,0,data/dic_pdfs/DIS_FR0000008674.pdf
+LCL ACTIONS    MONDE    HORS  ZONE   EURO   (D),FR0000018756,4,5,2.07,2,0,data/dic_pdfs/DIS_FR0000018756.pdf
+AXA Aedificandi A Capitalisation EUR,FR0000172041,5,5,1.97,4.5,0,data/dic_pdfs/DIS_FR0000172041.pdf
+AMUNDI OBLIG MONDE RESPONSABLE - P (C),FR0000286338,2,3,1.19,1.0,0.0,data/dic_pdfs/DIS_FR0000286338.pdf

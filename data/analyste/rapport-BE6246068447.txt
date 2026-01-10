@@ -1,0 +1,49 @@
+Voici l'analyse de la fiche de reporting pour le fonds ISIN BE6246068447.
+
+### Résumé concis
+Le fonds **DPAM B Equities World Sustainable - W** est un fonds d'actions géré activement, avec un investissement principalement dans des entreprises mondiales, promouvant des caractéristiques environnementales et sociales. 
+
+- **Taille du fonds**: 2 229,70 millions EUR
+- **Valeur nette d'inventaire (VNI)**: 428,90 EUR
+- **Nombre de positions**: 52
+- **Frais de gestion**: 0,80%  
+- **Frais d'entrée**: Maximum 2%
+- **Frais de sortie**: 0%
+
+### Performances glissantes du portefeuille
+```
+- 1 mois : 3,62%
+- YTD : 1,11%
+- 1 an : 6,41%
+- 3 ans (rend. actuariel) : 13,35%
+- 5 ans (rend. actuariel) : 9,68%
+- 10 ans (rend. actuariel) : 10,44%
+- Depuis la création (rend. actuariel) : 10,91%
+```
+
+### Performances calendaires par année
+```
+2015 : -30.0%
+2016 : 10.4%
+2017 : 10.5%
+2018 : -4.8%
+2019 : 28.9%
+2020 : 6.7%
+2021 : 27.5%
+2022 : -13.0%
+2023 : 18.1%
+```
+
+### Évaluation et avis
+
+- **Volatilité**: Le fonds présente une volatilité de 15,71%, supérieure à celle de son indice de référence à 12,94%. Cela indique un risque plus élevé.
+- **Ratios de performance**:
+  - **Ratio de Sharpe** : 0,51 (indique une performance moyenne par rapport au risque).
+  - **Ratio de Sortino** : 0,78 (meilleure évaluation face aux baisses).
+  - **Alpha** : -0,52% (le fonds sous-performe légèrement par rapport à son indice).
+- **Taux de rendement sur 3 ans** : 13,35%, en dessous du benchmark de 15,51%, et sur 5 ans, 9,68% contre 14,82%.
+
+### Conclusion
+Le fonds a montré des résultats mitigés, avec des performances positives sur la période récente, mais une volatilité supérieure à celle du marché et des résultats inférieurs par rapport à l'indice de référence. 
+
+Il pourrait être approprié pour les investisseurs cherchant une exposition à des investissements durables dans des conditions de prise de risque, mais étant donné son historique de performances, il serait prudent de considérer son adéquation avec les objectifs d'investissement individuels. Les performances passées ne garantissent pas les résultats futurs et le fonds présente un risque potentiel élevé de perte de capital【4:19†source】.

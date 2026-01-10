@@ -1,0 +1,1 @@
+export DATABASE_URL=postgresql://robo:$$$selimd12@akunnov.fr:5432/db

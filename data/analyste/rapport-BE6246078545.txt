@@ -1,0 +1,35 @@
+### Analyse du Reporting pour l'ISIN BE6246078545
+
+#### Performances Glissantes du Portefeuille (%)
+```
+1 mois               |  2.03
+YTD                  |  2.85
+1 an                |  3.61
+3 ans (rend. actuariel) |  8.52
+5 ans (rend. actuariel) |  9.00
+10 ans (rend. actuariel) |  7.90
+Depuis la création (rend. actuariel) |  7.99
+```
+
+#### Performances Calendaires par Année (%)
+```
+2015                 |  8.2
+2016                 |  2.6
+2017                 |  10.2
+2018                 |  -10.6
+2019                 |  26.0
+2020                 |  -3.3
+2021                 |  25.1
+2022                 |  -9.5
+2023                 |  15.8
+```
+
+#### Résumé pour le Client Retail
+Le fonds **DPAM B Equities Europe Sustainable** présente des performances mitigées ces dernières années. Bien que le rendement sur un an soit de **3.61%**, il est nettement inférieur à celui de son benchmark qui est de **15.88%**. Sur une période de **5 ans**, le rendement est de **9.00%**, encore une fois en deçà du benchmark qui affiche **13.87%**.
+
+### Évaluation
+- **Risques Observés**: Le fonds présente une volatilité légèrement plus élevée avec un ratio de Sharpe de **0.53**, ce qui indique un rendement relativement faible par rapport au risque pris.
+- **Composition du Portefeuille**: Le fonds investit majoritairement dans des actions d'entreprises européennes, ce qui le rend fortement exposé à l'économie locale.
+- **Nota Bene**: Des performances passées ne garantissent pas des rendements futurs et les risques de perte existent.
+
+En conclusion, bien que le fonds puisse convenir à des investisseurs cherchant une exposition durable sur le marché européen, il pourrait ne pas être le meilleur choix compte tenu de la sous-performance récurrente par rapport à son benchmark. Les investisseurs devraient évaluer leur tolérance au risque et leurs objectifs d'investissement avant de s'engager【4:1†source】.

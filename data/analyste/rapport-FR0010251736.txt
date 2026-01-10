@@ -1,0 +1,33 @@
+### Résumé du Reporting pour ISIN FR0010251736
+
+#### 1) Performances Glissantes du Portefeuille (affichées verticalement)
+
+- **1 mois** : 6,12%  
+- **3 mois** : 1,07%  
+- **1 an** : 1,04%  
+- **3 ans** : 7,47%  
+- **5 ans** : 19,39%  
+- **10 ans** : 19,62%  
+
+#### 2) Performances Calendaires par Année (affichées verticalement)
+
+- **2024** : 7,70%  
+- **2023** : 4,97%  
+- **2022** : -11,82%  
+- **2021** : 13,20%  
+- **2020** : -8,49%  
+- **2019** : 12,57%  
+- **2018** : -8,25%  
+- **2017** : -0,72%  
+- **2016** : -5,24%  
+- **2015** : 0,60%  
+
+#### 3) Avis Objectif et Conclusion
+
+Le fonds **Amundi Actions Euro Responsable Équilibre - P** présente des performances relativement stables avec un objectif d'investissement axé sur les actions européennes, tout en intégrant des critères ESG. En effet, la volatilité des performances sur 10 ans est de 6,93% et le ratio de Sharpe est légèrement positif sur 1 an (0,57), indiquant un bon équilibre entre risque et rendement.
+
+Cependant, il est important de noter une baisse maximale historique de -25,91%, ce qui pourrait alerter les investisseurs sur les risques potentiels inhérents. Les rendements des trois dernières années et le contexte macroéconomique récent montrent une volatilité et des performances fluctuantes.
+
+En somme, ce fonds semble être une option viable pour les investisseurs cherchant une exposition à des entreprises responsables, mais il comporte des risques notables. Une évaluation attentive de votre tolérance au risque et de vos objectifs d'investissement est recommandée avant de procéder à un investissement.  
+
+Source des données : **Reporting Amundi, ISIN FR0010251736**【4:3†reporting-FR0010251736.pdf】.

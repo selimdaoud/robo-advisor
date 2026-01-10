@@ -1,0 +1,33 @@
+Voici l'analyse du reporting pour le fonds avec l'ISIN LU1902443420.
+
+### Résumé des performances glissantes :
+```
+Performance sur 1 mois :  3.54%
+Performance année à date :  0.41%
+Performance sur 1 an :  5.54%
+Rendement actuariel sur 3 ans :  12.42%
+Rendement actuariel sur 5 ans :  8.79%
+Rendement actuariel sur 10 ans :  9.60%
+Depuis la création :  7.37%
+```
+
+### Performances calendaires par année :
+```
+2015 :  10.4%
+2016 :  10.5%
+2017 :  8.9%
+2018 :  -4.8%
+2019 :  28.9%
+2020 :  6.7%
+2021 :  27.5%
+2022 :  -13.0%
+2023 :  18.1%
+2024 :  25.3%
+```
+
+### Résumé pour un client retail :
+Le fonds **DPAM B Equities World Sustainable** présente une performance relativement solide dans le temps, avec un rendement annualisé de 9.60% sur 10 ans et une légère performance positive depuis le début de l'année actuelle. Toutefois, la performance de 2022 a été négative, ce qui peut être préoccupant. L'analyse des performances annuelles montre que le fonds a souvent surperformé sur plusieurs années, bien qu'il ait connu des baisses.
+
+Malgré sa sous-performance par rapport à son benchmark MSCI AC World Net Return sur 5 ans, avec un Alpha de -0.59% et un ratio de Sharpe de 0.45, ce fonds peut convenir à des investisseurs cherchant une exposition directe au marché boursier mondial, avec un accent sur le développement durable. Les frais de gestion s'élèvent à 1.74%, ce qui est compétitif.
+
+En conclusion, ce fonds affiche une certaine volatilité avec un beta de 1.138, ce qui signifie qu'il pourrait être plus sensible aux fluctuations du marché, mais il est promu comme respectant des critères environnementaux et sociaux (ESG). Les investisseurs doivent évaluer leur tolérance au risque avant de décider d'investir【4:10†source】.

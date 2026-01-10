@@ -1,0 +1,45 @@
+Voici un résumé concis du reporting pour le fonds ayant pour ISIN FR0007481536 :
+
+### Informations Générales
+- **Forme juridique** : Fonds Commun de Placement (FCP)
+- **Date de création** : 19/08/1994
+- **Frais de gestion** : 1,66%
+- **Durée minimum d'investissement recommandée** : 5 ans
+- **Notation Morningstar** : 3 étoiles
+
+### Performances Glissantes
+```
+Depuis le           | Performance du Portefeuille | Performance de l'Indice | Écart
+--------------------|----------------------------|-------------------------|--------
+1 mois              | 15,38%                     | 14,73%                  | 0,65%
+3 mois              | -0,23%                     | 0,17%                   | -0,40%
+1 an                | 4,90%                      | 5,19%                   | -0,29%
+3 ans               | 16,43%                     | 16,13%                  | 0,30%
+5 ans               | 33,97%                     | 42,08%                  | -8,11%
+10 ans              | 37,93%                     | 57,19%                  | -19,26%
+Depuis la création   | 50,83%                     | 80,45%                  | -29,62%
+```
+
+### Performances Calendaires
+```
+Année               | Performance du Portefeuille | Performance de l'Indice | Écart
+--------------------|----------------------------|-------------------------|--------
+2024                | 7,54%                      | 8,81%                   | -1,27%
+2023                | 11,24%                     | 19,02%                  | -7,78%
+2022                | -16,64%                    | -11,30%                 | -5,34%
+2021                | 17,97%                     | 17,67%                  | 0,29%
+2020                | -1,67%                     | -1,20%                  | -0,47%
+2019                | 22,46%                     | 23,30%                  | -0,84%
+2018                | -11,32%                    | -9,27%                  | -2,04%
+2017                | 6,97%                      | 7,24%                   | -0,27%
+2016                | 3,57%                      | 4,01%                   | -0,44%
+2015                | 4,20%                      | 5,46%                   | -1,27%
+```
+
+### Analyse et Conclusion
+Le fonds **Amundi Pulsactions** affiche des performances variées, avec une tendance légèrement inférieure par rapport à son indice sur plusieurs périodes, notamment sur 5 et 10 ans. Bien que le portefeuille ait réalisé des rendements satisfaisants ces dernières années (33,97% sur 5 ans et 37,93% sur 10 ans), il peine à surpasser l'indice de référence dans certains contextes économiques récents.
+
+Le profil de risque est modéré, avec une volatilité comparable à celle de l'indice, mais une baisse maximale significative sur 10 ans (-31,69%). Cela indique un risque de perte potentiellement préoccupant lors de périodes de tension sur les marchés.
+
+### Avis Final
+Ce fonds peut convenir à des investisseurs cherchant à diversifier leurs placements tout en acceptant un risque modéré. Cependant, les performances passées ne garantissent pas des rendements futurs, et une analyse approfondie des conditions du marché est recommandée avant toute décision d'investissement. En somme, c'est un fonds qui présente des caractéristiques intéressantes, mais qui pourrait bénéficier d'une amélioration pour optimiser ses rendements par rapport au marché【4:3†source】【4:5†source】.

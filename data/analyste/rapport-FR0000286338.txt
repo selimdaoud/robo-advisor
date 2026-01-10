@@ -1,0 +1,36 @@
+Voici un résumé du reporting pour le fonds lié à l'ISIN FR0000286338 :
+
+### Performances Glissantes du Portefeuille
+```
+- 1 mois :    3,82%
+- 3 mois :    0,02%
+- 1 an :      1,37%
+- 3 ans :     2,69%
+- 5 ans :     6,82%
+- 10 ans :   -7,34%
+- Depuis 1986 : 447,84%
+```
+
+### Performances Calendaires par Année
+```
+- 2024 :   0,27%
+- 2023 :   4,13%
+- 2022 : -11,62%
+- 2021 :  -3,55%
+- 2020 :   2,26%
+- 2019 :   6,81%
+- 2018 :  -1,63%
+- 2017 :   2,07%
+- 2016 :   0,49%
+- 2015 :   0,16%
+```
+
+### Résumé pour un Client Retail
+Le fonds **Amundi Oblig Monde Responsable (ISIN FR0000286338)** a pour objectif de surpasser son indice de référence via une gestion active sur les marchés obligataires. Il affiche une valeur liquidative de **99,48 EUR** et gère un actif de **844,47 millions EUR**.
+
+Avec un rendement du portefeuille à **3,19%** contre **2,30%** pour l'indice, le fonds montre une performance solide, notamment sur le long terme. Cependant, il a enregistré une volatilité légèrement supérieure à celle de son indice. De plus, la gestion des risques est efficace, se traduisant par un indicateur de risque qui classe le fonds dans une catégorie à faibles risques pour les investisseurs.
+
+Sur le plan des performances calendaires, 2022 a été une année difficile avec une baisse significative, mais 2023 et 2024 montrent des signes de reprise avec des performances positives. Le portefeuille est bien diversifié, bien que quelques allocations géographiques aient pesé négativement sur la performance.
+
+### Verdict
+Dans l'ensemble, le fonds semble être un investissement stable et plutôt performant, bien adapté pour des investisseurs cherchant à diversifier leur portefeuille dans un cadre obligataire responsable. Toutefois, comme tout investissement, il comporte des risques, et il est conseillé de considérer une durée d'investissement d'au moins **3 ans** pour en tirer le meilleur parti.
