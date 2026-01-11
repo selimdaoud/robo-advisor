@@ -1033,7 +1033,8 @@ def display_with_curses(rows: List[Dict[str, Any]], db_url: str, user_id: Option
 
         def render():
             stdscr.erase()
-            stdscr.addstr(0, 1, "Pipeline Expert (DB)")
+            version = "v0.1.0"
+            stdscr.addstr(0, 1, f"Pipeline Expert (DB) - {version}")
             if mode == "companies":
                 companies = sorted({row.get("management_company", "") for row in rows_list})
                 draw_row(2, ["Sociétés de gestion", "", "", "", "", "", "", ""])
