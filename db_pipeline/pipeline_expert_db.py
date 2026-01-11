@@ -34,6 +34,8 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import requests
+
 import psycopg
 from db_pipeline.ai_service import (
     ANALYST_MANAGER_URLS,
@@ -268,6 +270,8 @@ def display_with_curses(rows: List[Dict[str, Any]], db_url: str, user_id: Option
             for idx, col in enumerate(cols):
                 col_str = "" if col is None else str(col)
                 cell = col_str[: col_widths[idx]].ljust(col_widths[idx])
+                if x + len(cell) >= curses.COLS - 1:
+                    break  # évite addwstr ERR si terminal trop étroit
                 stdscr.addstr(y, x, cell, color)
                 x += col_widths[idx] + 1
 
@@ -1094,15 +1098,17 @@ def display_with_curses(rows: List[Dict[str, Any]], db_url: str, user_id: Option
                 stdscr.addstr(
                     curses.LINES - 1,
                     1,
-                    "Tab: Soc. gestion | 1: Fond | 2: +produit | 3: -produit | r: tri SRI | f: tri frais | d: ouvrir PDF | s: ISIN | Enter: détails | ESC/q: quitter",
+                    "Tab: Soc. gestion | 1: Fond | 2: +produit | 3: -produit | p: valeur | r: tri SRI | f: tri frais | d: ouvrir PDF | s: ISIN | Enter: détails | ESC/q: quitter",
                 )
             stdscr.refresh()
 
         render()
         while True:
             ch = stdscr.getch()
-            if ch in (ord("q"), ord("Q"), 27):
+            if ch in (ord("q"), ord("Q")):
                 break
+            if ch == 27:  # ESC dans la vue principale : ignorer (ne pas quitter)
+                continue
             if ch == 9:  # Tab
                 if mode == "rows":
                     mode = "companies"
@@ -1189,6 +1195,96 @@ def display_with_curses(rows: List[Dict[str, Any]], db_url: str, user_id: Option
                     target = next((r for r in rows_list if str(r.get("isin", "")).upper() == isin_query), None)
                     if target:
                         show_popup(target)
+                render()
+            elif ch in (ord("p"), ord("P")):
+                api_key = os.getenv("ALPHAVANTAGE_API_KEY", "")
+                if not api_key:
+                    show_message("Erreur", "ALPHAVANTAGE_API_KEY manquant.", color_pair=4)
+                    render()
+                    continue
+                if not current_rows:
+                    render()
+                    continue
+                spin_win = curses.newwin(5, 60, max(1, (curses.LINES - 5) // 2), max(1, (curses.COLS - 60) // 2))
+                spin_win.bkgd(" ", curses.color_pair(2))
+                spin_win.box()
+                stop_event = threading.Event()
+                results = []
+
+                def worker_quotes():
+                    nonlocal results
+                    try:
+                        for idx, row in enumerate(current_rows):
+                            sym = (row.get("symbol") or "").strip()
+                            qty = row.get("quantity") or 0
+                            isin_val = row.get("isin", "")
+                            if not sym:
+                                results.append((row, None, None, "Symbole manquant"))
+                                continue
+                            try:
+                                price, date = _fetch_last_close(sym, api_key)
+                                results.append((row, price, date, None))
+                            except Exception as exc:
+                                results.append((row, None, None, str(exc)))
+                            if idx < len(current_rows) - 1:
+                                time.sleep(1.2)
+                    finally:
+                        stop_event.set()
+
+                t = threading.Thread(target=worker_quotes, daemon=True)
+                t.start()
+                spinner = ["|", "/", "-", "\\"]
+                idx = 0
+                while not stop_event.is_set():
+                    spin_win.erase()
+                    spin_win.bkgd(" ", curses.color_pair(2))
+                    spin_win.box()
+                    msg = f"Récupération des cotations... {spinner[idx % len(spinner)]}"
+                    spin_win.addstr(2, 2, msg[: 60 - 4], curses.color_pair(2))
+                    spin_win.refresh()
+                    idx += 1
+                    time.sleep(0.1)
+                t.join()
+                del spin_win
+
+                lines = []
+                total = 0.0
+                latest_date = ""
+                for row, price, date, err in results:
+                    sym = (row.get("symbol") or "").strip()
+                    if not sym:
+                        continue  # on ignore les produits sans symbole
+                    name = row.get("product_name", "") or row.get("isin", "")
+                    qty = row.get("quantity") or 0
+                    if err or price is None:
+                        lines.append(f"{sym} | {name} | ERREUR: {err}")
+                        continue
+                    val = price * float(qty or 0)
+                    total += val
+                    latest_date = latest_date or date
+                    lines.append(f"{sym} | {name} | {qty} x {price:.4f} = {val:.4f}")
+                lines.append("")
+                lines.append(f"Total: {total:.4f}")
+                if latest_date:
+                    lines.insert(0, f"Date: {latest_date}")
+
+                # Afficher le popup résultat
+                h = min(curses.LINES - 2, max(6, len(lines) + 4))
+                w = min(curses.COLS - 2, max(40, max(len(l) for l in lines) + 4))
+                sy = max(1, (curses.LINES - h) // 2)
+                sx = max(1, (curses.COLS - w) // 2)
+                win_val = curses.newwin(h, w, sy, sx)
+                win_val.box()
+                win_val.addstr(0, 2, " Valorisation ")
+                for i, line in enumerate(lines[: h - 3]):
+                    win_val.addstr(1 + i, 2, line[: w - 4])
+                win_val.addstr(h - 2, 2, "Enter/ESC/q pour fermer")
+                win_val.refresh()
+                while True:
+                    chv = win_val.getch()
+                    if chv in (10, 13, ord("\n"), ord("q"), ord("Q"), 27):
+                        break
+                del win_val
                 render()
             elif ch in (ord("d"), ord("D")):
                 if current_rows:
@@ -1512,6 +1608,24 @@ def clean_orphan_pdfs(db_url: str, base_dir: Path, force: bool = False) -> None:
                 pdf.unlink()
             except Exception as exc:
                 print(f"   (erreur suppression: {exc})")
+
+
+# ---------------------
+# Cotations Alpha Vantage (valorisation portefeuille)
+# ---------------------
+
+
+def _fetch_last_close(symbol: str, api_key: str) -> tuple[float, str]:
+    params = {"function": "GLOBAL_QUOTE", "symbol": symbol, "apikey": api_key}
+    r = requests.get("https://www.alphavantage.co/query", params=params, timeout=10)
+    r.raise_for_status()
+    data = r.json()
+    quote = data.get("Global Quote", {})
+    price = quote.get("05. price")
+    date = quote.get("07. latest trading day", "")
+    if not price:
+        raise ValueError(f"Réponse invalide pour {symbol}: {data}")
+    return float(price), date
 
 
 def main() -> None:
